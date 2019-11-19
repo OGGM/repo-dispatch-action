@@ -1,0 +1,16 @@
+name: 'Repository Dispatch Action'
+description: 'Calls the specificed repository dispatch action'
+inputs:
+  repo:
+    required: true
+  auth_user:
+    required: true
+  auth_secret:
+    required: true
+  action:
+    required: true
+  payload_json:
+    default: '{}'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
